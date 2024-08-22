@@ -4,21 +4,27 @@ A web application to assist users in learning the Selichot prayers in the tradit
 
 ## Project Structure
 
-- **`/components`**: Contains React components for the application, including layout, header, footer, and pages.
-- **`/data`**: Contains data and configuration files such as Firebase configuration and private route logic.
+- **`/assets`**: Contains image assets like Selichot banners and icons.
+- **`/audio`**: Contains the audio player component and its associated styles.
+- **`/components`**: Contains React components for the application, including layout, header, footer, and pages such as `Dashboard`, `History`, and `Calendar`.
+- **`/data`**: Contains data and configuration files such as Firebase configuration, authentication context, and file list logic.
 - **`/hooks`**: Contains custom React hooks such as `useTitle` for managing document titles.
-- **`/styles.css`**: Global CSS styles for the application.
+- **`/routes`**: Contains route-related components such as private route handling and 404 error pages.
+- **`styles.css`**: Global CSS styles for the application.
 - **`index.js`**: Entry point of the application.
-- **`App.js`**: Main application component that defines routing and layout.
+- **`App.js`**: Main application component that defines
 
 ## Features
 
 - **Login and Signup:** Secure authentication using Firebase.
-- **Dashboard:** Main page for logged-in users.
+- **Locked Routing:** Access to specific routes is restricted based on authentication status.
+- **Dashboard:** Main page for logged-in users, displaying relevant content and audio.
+- **Calendar:** View Hebrew dates, Selichot schedules, and select dates to access corresponding prayers.
+- **Dynamic Content:** Audio files are loaded based on the selected Hebrew date.
+- **Responsive Design:** The app is optimized for various devices, with features like dynamic audio player control on date changes.
+- **Polished UI:** Professional and clean interface using Ant Design components.
 - **History:** Detailed information about Selichot traditions.
-- **About Us:** Information about authors and contributors.
-- **Calendar:** Calendar view for selecting dates and viewing content.
-- **Responsive Design:** Modern UI with Ant Design components.
+- **About Us:** Learn about the team behind this project.
 
 ## Usage
 
@@ -27,11 +33,10 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **Dashboard:** After logging in, access the dashboard at `/`.
 - **History:** View Selichot traditions at `/history`.
 - **About Us:** Learn about the team at `/about_us`.
-- **Calendar:** Select dates and view content at `/calendar`.
+- **Calendar:** Select dates and view Selichot content at `/calendar`.
 
 ## Notes
 
 - **Authentication:** The site uses Firebase for authentication. Users need to be logged in to access certain routes.
-- **Routing:** Ensure routes are protected properly to prevent unauthorized access.
-
----
+- **Routing:** Routes are protected to prevent unauthorized access.
+- **Hebrew Date Integration:** Selichot content and audio are presented based on traditional Hebrew dates.
