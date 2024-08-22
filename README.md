@@ -1,5 +1,9 @@
 # Selichot: The Bene Israeli Tradition
 
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/assets/Selichot.png?raw=true" alt="Selichot" />
+</p>
+
 A web application to assist users in learning the Selichot prayers in the traditional Bene-Israeli form. The app features a modern UI with routes for various functionalities including login, signup, and content browsing.
 
 ## Project Structure
@@ -13,6 +17,10 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **`styles.css`**: Global CSS styles for the application.
 - **`index.js`**: Entry point of the application.
 - **`App.js`**: Main application component that defines
+<br/><br/>
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/screenshots/dashboard.png?raw=true" alt="Selichot" />
+</p>
 
 ## Features
 
