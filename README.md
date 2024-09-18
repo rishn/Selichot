@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Selichot: The Bene Israeli Tradition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/assets/Selichot.png?raw=true" alt="Selichot" />
+</p>
 
-## Available Scripts
+A web application to assist users in learning the Selichot prayers in the traditional Bene-Israeli form. The app features a modern UI with routes for various functionalities including login, signup, and content browsing.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+- **`/assets`**: Contains image assets like Selichot banners and icons.
+- **`/audio`**: Contains the audio player component and its associated styles.
+- **`/components`**: Contains React components for the application, including layout, header, footer, and pages such as `Dashboard`, `History`, and `Calendar`.
+- **`/data`**: Contains data and configuration files such as Firebase configuration, authentication context, and file list logic.
+- **`/hooks`**: Contains custom React hooks such as `useTitle` for managing document titles.
+- **`/routes`**: Contains route-related components such as private route handling and 404 error pages.
+- **`styles.css`**: Global CSS styles for the application.
+- **`index.js`**: Entry point of the application.
+- **`App.js`**: Main application component that defines
+<br/><br/>
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/screenshots/dashboard.png?raw=true" alt="Selichot" />
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Login and Signup:** Secure authentication using Firebase.
+- **Locked Routing:** Access to specific routes is restricted based on authentication status.
+- **Dashboard:** Main page for logged-in users, displaying relevant content and audio.
+- **Calendar:** View Hebrew dates, Selichot schedules, and select dates to access corresponding prayers.
+- **Dynamic Content:** Audio files are loaded based on the selected Hebrew date.
+- **Responsive Design:** The app is optimized for various devices, with features like dynamic audio player control on date changes.
+- **Polished UI:** Professional and clean interface using Ant Design components.
+- **History:** Detailed information about Selichot traditions.
+- **About Us:** Learn about the team behind this project.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Login:** Navigate to `/login` to access the login form.
+- **Signup:** Navigate to `/signup` to create a new account.
+- **Dashboard:** After logging in, access the dashboard at `/`.
+- **History:** View Selichot traditions at `/history`.
+- **About Us:** Learn about the team at `/about_us`.
+- **Calendar:** Select dates and view Selichot content at `/calendar`.
 
-### `npm run build`
+## Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Authentication:** The site uses Firebase for authentication. Users need to be logged in to access certain routes.
+- **Routing:** Routes are protected to prevent unauthorized access.
+- **Hebrew Date Integration:** Selichot content and audio are presented based on traditional Hebrew dates.
