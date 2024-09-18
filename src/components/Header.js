@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Button } from 'antd';
+import { Layout, Button, Space } from 'antd';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { auth } from '../data/FirebaseConfig'; // Import the auth from Firebase config
 import { LogoutOutlined, ArrowLeftOutlined } from '@ant-design/icons'; // Import icons
@@ -54,7 +54,8 @@ function AppHeader() {
             Back
           </Button>
         )}
-        <div className="header-title">Selichot: The Bene Israeli Tradition</div>
+        {! isAuthenticated && <Space style={{width: "50px"}}> </Space>}
+        Selichot: The Bene Israeli Tradition
         {isAuthenticated && (
           <Button 
             className="logout-button" 
@@ -65,6 +66,7 @@ function AppHeader() {
             Logout
           </Button>
         )}
+        {! isAuthenticated && <Space style={{width: "50px"}}> </Space>}
       </div>
     </Header>
   );
