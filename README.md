@@ -50,6 +50,7 @@ A web application to assist users in learning the Selichot prayers in the tradit
 
 ## Notes
 
-- **Authentication:** The site uses Firebase for authentication. Users need to be logged in to access certain routes.
+- **Authentication:** The site uses Firebase for authentication. Users must be logged in to access certain routes.
 - **Routing:** Routes are protected to prevent unauthorized access.
-- **Hebrew Date Integration:** Selichot content and audio are presented based on traditional Hebrew dates.
+- **Hebrew Date Integration:** Selichot content and audio are based on traditional Hebrew dates.
+- **Audio Files:** The current audio files are placeholders for demonstration purposes. Final audio files are expected from the client.
