@@ -17,6 +17,7 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **`styles.css`**: Global CSS styles for the application.
 - **`index.js`**: Entry point of the application.
 - **`App.js`**: Main application component that defines
+
 <br/><br/>
 <p align="center">
   <img src="https://github.com/rishn/Selichot/blob/main/screenshots/dashboard.png?raw=true" alt="Selichot" />
@@ -42,6 +43,10 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **History:** View Selichot traditions at `/history`.
 - **About Us:** Learn about the team at `/about_us`.
 - **Calendar:** Select dates and view Selichot content at `/calendar`.
+
+## Deployed URL
+
+- **Visit the deployed application**: [Selichot App](https://selichot-app.web.app)
 
 ## Notes
 

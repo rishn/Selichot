@@ -1,0 +1,153 @@
+/* Background image for the entire app */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  background-image: url('/public/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  margin: 0;
+  padding: 0;
+}
+
+/* General font size for body text */
+.body-text {
+  font-size: 20px;
+  font-family: 'Merriam', serif;
+  font-weight: 600; /* Regular weight */
+  letter-spacing: 0.5px; /* Spacing between letters */
+}
+
+/* General font size for sub text */
+.sub-text {
+  font-size: 17px;
+  font-family: 'Merriam', serif;
+  font-weight: 400; /* Regular weight */
+  letter-spacing: 0.5px; /* Spacing between letters */
+}
+
+/* Font size for headings */
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Increase icon size and improve clarity with transform */
+.menu-icon {
+  font-size: 30px; /* Increase size for better clarity */
+  transform: scale(1.2); /* Scale the icon for better clarity */
+  filter: brightness(1.2) contrast(1.2); /* Adjust brightness and contrast for better appearance */
+}
+
+/* Font size for icons */
+.icon {
+  font-size: 24px;
+}
+
+/* Additional layout and color settings */
+.ant-layout {
+  background-color: transparent; /* Make content transparent over the background */
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #002F93;
+}
+
+.ant-btn-primary {
+  background-color: #0038B8;
+  border-color: #0038B8;
+  border: none;
+}
+
+/* Header styles */
+.header {
+  background-color: rgba(0, 56, 84, 0.5);
+  color: #E1E1E1;
+  text-align: center;
+  font-family: 'Lucida Bright', serif;
+  font-size: 35px;
+  font-weight: bold; /* Makes the header text bold */
+  padding: 4px; /* Adds space between the text and the bottom of the header */
+}
+
+/* Sub header styles */
+.sub-header {
+  background-color: transparent;
+  color: #0038B8;
+  text-align: center;
+  font-family: 'Lucida Bright', serif;
+  font-size: 30px;
+  font-weight: bold; /* Makes the header text bold */
+  padding: 4px; /* Adds space between the text and the bottom of the header */
+}
+
+/* styles.css or a dedicated stylesheet */
+.title-card {
+  border: none !important; /* Remove border */
+  background-color: transparent;
+}
+
+/* Custom placeholder style for DatePicker */
+.ant-picker-input input::placeholder {
+  font-size: 17px !important; /* Adjust the font size as needed */
+}
+
+/* Custom styles for Calendar component */
+.ant-calendar {
+  background-color: #ECECEB !important; /* Beige background for calendar */
+}
+
+.ant-picker-cell.ant-picker-cell-in-view {
+  background-color: #ECECEB !important; /* Beige background for calendar cells */
+  font-family: 'Merriam', serif !important; /* Apply font family to calendar cells */
+  font-size: 17px !important; /* Increase font size in calendar cells */
+  color: #000 !important; /* Maintain text color when cell is selected */
+}
+
+.ant-picker-body {
+  background-color: #ECECEB !important; /* Beige background for picker content */
+}
+
+/* Additional style for date content */
+.cell-content {
+  font-family: 'Merriam', serif !important; /* Apply font family to date cell content */
+  font-size: 15px !important; /* Font size for date cell content */
+  color: #0038B8 !important; /* Text color for highlighted content */
+}
+
+/* Style for dates of the previous and upcoming months */
+.ant-picker-cell.ant-picker-cell-disabled {
+  color: #000 !important; /* Darker grey for previous and upcoming month dates */
+}
+
+.custom-form-label {
+  font-family: 'Merriam', serif; /* Change this to your preferred font */
+  font-size: 17px; /* Adjust the size as needed */
+  color: #000; /* Adjust the color if needed */
+  font-weight: 500; /* Make the label semi-bold */
+}
+
+.logout-button {
+  color: #FFF;
+  background-color: transparent;
+  border: transparent;
+}
+
+.back-button {
+  color: #FFF;
+  background-color: transparent;
+  border: transparent;
+}
+
+.spinner-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.not-found-container {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+}
