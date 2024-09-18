@@ -43,25 +43,29 @@ function AppHeader() {
 
   return (
     <Header className="header">
-      {isAuthenticated && (
-        <Button 
-          className="back-button" 
-          type="primary" 
-          icon={<ArrowLeftOutlined />} 
-          onClick={handleBack} 
-          style={{ float: 'left', marginTop: '12px', marginLeft: '10px' }} 
-        >Back</Button>
-      )}
-      Selichot: The Bene Israeli Tradition
-      {isAuthenticated && (
-        <Button 
-          className="logout-button" 
-          type="primary" 
-          icon={<LogoutOutlined />} 
-          onClick={handleLogout} 
-          style={{ float: 'right', marginTop: '12px', marginRight: '10px' }} 
-        >Logout</Button>
-      )}
+      <div className="header-content">
+        {isAuthenticated && (
+          <Button 
+            className="back-button" 
+            type="primary" 
+            icon={<ArrowLeftOutlined />} 
+            onClick={handleBack}
+          >
+            Back
+          </Button>
+        )}
+        <div className="header-title">Selichot: The Bene Israeli Tradition</div>
+        {isAuthenticated && (
+          <Button 
+            className="logout-button" 
+            type="primary" 
+            icon={<LogoutOutlined />} 
+            onClick={handleLogout}
+          >
+            Logout
+          </Button>
+        )}
+      </div>
     </Header>
   );
 }
