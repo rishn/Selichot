@@ -20,6 +20,8 @@
 .env.test.local
 .env.production.local
 
+Transcriptions.json
+
 # Miscellaneous
 .DS_Store
 

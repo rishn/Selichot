@@ -5,7 +5,7 @@ import './AudioPlayer.css'; // Import CSS for custom styles
 
 const { Text } = Typography;
 
-const AudioPlayer = ({ audioUrl }) => {
+const AudioPlayer = ({ audioUrl, transcription }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -73,6 +73,11 @@ const AudioPlayer = ({ audioUrl }) => {
     }
   }, [audioUrl]);
 
+  // Function to check if current time is within the transcription's time range
+  const isCurrentTextActive = (start, end) => {
+    return currentTime >= start && currentTime <= end;
+  };
+
   return (
     <div className="audio-player">
       <audio
@@ -107,6 +112,70 @@ const AudioPlayer = ({ audioUrl }) => {
           {' / '}
           {Math.floor(duration / 60)}:{('0' + Math.floor(duration % 60)).slice(-2)}
         </Text>
+      </div>
+
+      {/* Display Transcription with Highlights */}
+      <div className="transcription">
+        <div>
+          <strong>Hebrew:</strong>
+          {transcription?.hebrew?.split("[").map((entry, index) => {
+            const [timeRange, ...text] = entry.split("]");
+            const [start, end] = timeRange.split("-");
+            const textContent = text.join("]").trim();
+
+            return (
+              <span
+                key={index}
+                style={{
+                  backgroundColor: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? '#ff0' : 'transparent',
+                  fontWeight: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? 'bold' : 'normal',
+                }}
+              >
+                {textContent}{" "}
+              </span>
+            );
+          })}
+        </div>
+        <div>
+          <strong>English:</strong>
+          {transcription?.english?.split("[").map((entry, index) => {
+            const [timeRange, ...text] = entry.split("]");
+            const [start, end] = timeRange.split("-");
+            const textContent = text.join("]").trim();
+
+            return (
+              <span
+                key={index}
+                style={{
+                  backgroundColor: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? '#ff0' : 'transparent',
+                  fontWeight: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? 'bold' : 'normal',
+                }}
+              >
+                {textContent}{" "}
+              </span>
+            );
+          })}
+        </div>
+        <div>
+          <strong>Phonetic:</strong>
+          {transcription?.phonetic?.split("[").map((entry, index) => {
+            const [timeRange, ...text] = entry.split("]");
+            const [start, end] = timeRange.split("-");
+            const textContent = text.join("]").trim();
+
+            return (
+              <span
+                key={index}
+                style={{
+                  backgroundColor: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? '#ff0' : 'transparent',
+                  fontWeight: isCurrentTextActive(parseFloat(start), parseFloat(end)) ? 'bold' : 'normal',
+                }}
+              >
+                {textContent}{" "}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

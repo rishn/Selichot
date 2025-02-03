@@ -19,6 +19,15 @@ body {
   letter-spacing: 0.5px; /* Spacing between letters */
 }
 
+/* General font size for body text */
+.history-text {
+  font-size: 20px;
+  font-family: 'Merriam', serif;
+  font-weight: 600; /* Regular weight */
+  letter-spacing: 0.5px; /* Spacing between letters */
+  background-color: rgba(238, 238, 238, 0.5);
+}
+
 /* General font size for sub text */
 .sub-text {
   font-size: 17px;
