@@ -229,7 +229,7 @@ function Dashboard() {
           borderRadius: '8px', 
           width: 'fit-content', 
           backgroundColor: 'rgba(106, 148, 247, 0.8)',
-          fontSize: '125%'
+          fontSize: '110%'
         }}>
           <span style={{ fontWeight: 'bold' }}>**</span> While the app currently provides temporary recordings to showcase the full functionality, <br/>
           <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>these recordings are not the authentic Selichot prayers for the Bene-Israeli community. <br/>
@@ -240,9 +240,9 @@ function Dashboard() {
       </div>
 
       {/* Image Section */}
-      <div style={{ flex: '0 0 500px', textAlign: 'center' }}>
+      {<div className="hide-on-mobile" style={{ flex: '0 0 500px', textAlign: 'center' }}>
         <img src={selichotImage} alt="Selichot" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
-      </div>
+      </div>}
     </div>
   );
 }

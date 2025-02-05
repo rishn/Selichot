@@ -7,7 +7,7 @@ import useTitle from '../hooks/UseTitle';
 
 const { Title, Paragraph } = Typography;
 
-const CalendarPage = () => {
+const CalendarPage = ({ isMobile }) => {
   useTitle('Calendar - Selichot');
 
   const [selectedDate, setSelectedDate] = useState(dayjs()); // Default to today’s date
@@ -67,14 +67,14 @@ const CalendarPage = () => {
           cursor: isDisabled ? 'not-allowed' : 'pointer'
         }}
       >
-        <div style={{ opacity: isDisabled ? 0.5 : 1, color: "#000000" }}>
+        {!isMobile && <div style={{ opacity: isDisabled ? 0.5 : 1, color: "#000000" }}>
           {formattedHebrewDate}
-        </div>
+        </div>}
         {(
           (hebrewMonth === 'Elul' && hebrewDay > 1 && dayOfWeek !== 6) ||
           (hebrewMonth === 'Tishri' && hebrewDay >= 3 && hebrewDay <= 9 && dayOfWeek !== 6)
         ) && (
-          <div style={{ color: '#0038B8' }}>Selichot Prayers</div>
+          <div style={{ color: '#0038B8' }}>{isMobile ? 'Seli\nchot' : 'Selichot Prayers'}</div>
         )}
       </div>
     );
@@ -95,10 +95,10 @@ const CalendarPage = () => {
         </Paragraph>
         <Calendar
           onSelect={onDateSelect}
-          fullscreen={false}
+          fullscreen={isMobile && true}
           dateCellRender={dateCellRender}
           defaultValue={selectedDate || dayjs()} // Ensures a fallback if selectedDate is null
-          style={{ backgroundColor: '#ececeb', padding: '20px' }}
+          style={{ backgroundColor: '#ececeb', padding: '20px', width: window.innerWidth < 768 ? '140%' : '', marginLeft: window.innerWidth < 768 ? '-20%' : '' }}
         />
         {selectedDate && (
           <div style={{ marginTop: '20px' }}>

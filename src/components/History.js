@@ -11,7 +11,7 @@ import Cloth from '../assets/Cloth.jpg'
 
 const { Title, Paragraph } = Typography;
 
-const History = () => {
+const History = ({isMobile}) => {
   useTitle('History - Selichot');
 
   return (
@@ -19,9 +19,11 @@ const History = () => {
       <Card className='title-card'>
         <Title level={2} style={{ color: '#0038B8' }}>History of Selichot</Title>
         
-        <img src={Book} alt="Traditional Jewish Prayer Book" 
-          style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} />
-
+        
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src={Book} alt="Traditional Jewish Prayer Book" 
+            style={{ width: isMobile ? '140%' : '100%', borderRadius: '8px', marginBottom: '20px' }} />
+        </div>
         {/* Selichot Prayers Introduction */}
         <Paragraph className='history-text'>
           Selichot prayers are a deeply significant part of Jewish tradition, performed during the period of repentance leading up to the High Holidays of Rosh Hashanah and Yom Kippur. They are a collection of hymns, petitions, and prayers that are recited to seek forgiveness from the Almighty for the sins committed throughout the year. The Selichot prayers offer an opportunity for spiritual reflection and renewal, allowing individuals to turn inward, atone for their mistakes, and recommit to their faith.
@@ -42,8 +44,10 @@ const History = () => {
           </ul>
         </Paragraph>
         
-        <img src={RoshHashanah} alt="Rosh Hashanah" 
-          style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src={RoshHashanah} alt="Rosh Hashanah" 
+            style={{ width: isMobile ? '140%' : '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+        </div>
 
         {/* The Role of Selichot in Jewish Culture */}
         <Paragraph className='history-text'>
@@ -52,7 +56,7 @@ const History = () => {
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img src={Thirteen} alt="13 Attributes of Mercy" 
-            style={{ width: '50%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+            style={{ width: isMobile ? '140%' : '50%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
         </div>
 
         {/* Customary Practices */}
@@ -62,7 +66,7 @@ const History = () => {
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img src={Community} alt="Bene Israeli Community" 
-            style={{ width: '75%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+            style={{ width: isMobile ? '140%' : '75%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
         </div>
 
         {/* The Central Themes of Selichot */}
@@ -75,17 +79,20 @@ const History = () => {
           </ul>
         </Paragraph>
 
-        <img src={Jerusalem} alt="Jerusalem Landscape" 
-          style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src={Jerusalem} alt="Jerusalem Landscape" 
+            style={{ width: isMobile ? '140%' : '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+        </div>
 
         {/* Conclusion */}
         <Paragraph className='history-text'>
           In conclusion, Selichot prayers are a profound spiritual practice that holds deep meaning for Jewish communities. They offer an opportunity for reflection, repentance, and renewal in preparation for the High Holidays. Whether recited in a synagogue or at home, the prayers connect individuals with centuries of Jewish tradition, reminding them of their relationship with God and their commitment to moral and spiritual growth. As we await the accurate and authentic recordings of these prayers, we strive to ensure that this sacred tradition continues to be accessible to all, providing a meaningful and transformative experience for every listener.
         </Paragraph>
 
-        <img src={Cloth} alt="Cloth" 
-            style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
-            
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src={Cloth} alt="Cloth" 
+              style={{ width: isMobile ? '140%' : '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+        </div>
       </Card>
     </div>
   );

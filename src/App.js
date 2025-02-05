@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
@@ -21,6 +21,14 @@ const { Content } = Layout;
 
 function App() {
   const { user, loading } = useAuth();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (loading) {
     return (
@@ -46,9 +54,9 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route element={<PrivateRoute />}>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/history" element={<History />} />
+                <Route path="/history" element={<History isMobile={isMobile} />} />
                 <Route path="/about_us" element={<AboutUs />} />
-                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/calendar" element={<Calendar isMobile={isMobile} />} />
               </Route>
               {/* Catch-all route for invalid paths */}
               <Route path="*" element={<NotFound />} />
