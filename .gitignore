@@ -20,10 +20,10 @@
 .env.test.local
 .env.production.local
 
-Transcriptions.json
-
 # Miscellaneous
 .DS_Store
+Transcriptions.json
+demos
 
 # Logs
 npm-debug.log*

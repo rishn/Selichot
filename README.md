@@ -23,6 +23,33 @@ A web application to assist users in learning the Selichot prayers in the tradit
   <img src="https://github.com/rishn/Selichot/blob/main/screenshots/dashboard.png?raw=true" alt="Selichot" />
 </p>
 
+## Demos
+### Windows Opera Demo
+<p align="center">
+  <a href="https://drive.google.com/file/d/1hMvXM5y1YEM_rBOx1WZudoGyqd5i7wl1/view">
+    <img src="https://github.com/user-attachments/assets/db04d91d-df11-4605-b60c-c911953e20ef" alt="Watch Windows Opera Demo" width="600">
+  </a>
+</p>
+
+
+### Android Google Chrome Demo
+<p align="center">
+  <a href="https://drive.google.com/file/d/17f2OemNMUu8CeDQNkUrL1CB1Iy1j6tVd/view">
+    <img src="https://github.com/user-attachments/assets/916afa0c-be75-499c-81a6-e30a21309305" alt="Watch Android Google Chrome Demo" width="600">
+  </a>
+</p>
+
+## Screenshots
+### Listen to Prayers
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/screenshots/prayers.png?raw=true" alt="Prayer Audio Player" />
+</p>
+
+### View Calendar
+<p align="center">
+  <img src="https://github.com/rishn/Selichot/blob/main/screenshots/calendar.png?raw=true" alt="Calendar View" />
+</p>
+
 ## Features
 
 - **Login and Signup:** Secure authentication using Firebase.
