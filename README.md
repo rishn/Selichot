@@ -16,7 +16,7 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **`/routes`**: Contains route-related components such as private route handling and 404 error pages.
 - **`styles.css`**: Global CSS styles for the application.
 - **`index.js`**: Entry point of the application.
-- **`App.js`**: Main application component that defines
+- **`App.js`**: Main application component that defines routing and layout.
 
 <br/><br/>
 <p align="center">
@@ -52,15 +52,17 @@ A web application to assist users in learning the Selichot prayers in the tradit
 
 ## Features
 
-- **Login and Signup:** Secure authentication using Firebase.
-- **Locked Routing:** Access to specific routes is restricted based on authentication status.
-- **Dashboard:** Main page for logged-in users, displaying relevant content and audio.
-- **Calendar:** View Hebrew dates, Selichot schedules, and select dates to access corresponding prayers.
-- **Dynamic Content:** Audio files are loaded based on the selected Hebrew date.
-- **Responsive Design:** The app is optimized for various devices, with features like dynamic audio player control on date changes.
-- **Polished UI:** Professional and clean interface using Ant Design components.
-- **History:** Detailed information about Selichot traditions.
-- **About Us:** Learn about the team behind this project.
+- **Firebase Authentication:** Users can create accounts and securely sign in to personalize their experience.
+- **Locked Routing:** Certain sections adapt based on authentication status, ensuring a tailored interaction.
+- **Dashboard:** A dedicated space presenting curated content alongside relevant audio selections.
+- **Calendar:** Displays Hebrew dates and Selichot schedules, allowing users to learn about Hebrew dates and when Selichot takes place.
+- **Firebase Storage for Audio:** Prayers are dynamically retrieved and played based on the selected Hebrew date, maintaining a structured listening experience.
+- **Firebase Realtime Database for Transcriptions:** Each prayer is accompanied by a structured transcription, presenting Hebrew text, its English meaning, and phonetic guidance to aid pronunciation.
+- **Responsive Design:** A seamless interface that adjusts to different screen sizes while refining audio playback controls.
+- **Polished UI:** A clean, modern design for an intuitive and immersive experience using AntDesign components.
+- **Selichot History:** Detailed insights into the traditions and significance of Selichot.
+- **Firebase Hosting:** Ensures smooth deployment and reliable access to the application.
+
 
 ## Usage
 
@@ -69,7 +71,7 @@ A web application to assist users in learning the Selichot prayers in the tradit
 - **Dashboard:** After logging in, access the dashboard at `/`.
 - **History:** View Selichot traditions at `/history`.
 - **About Us:** Learn about the team at `/about_us`.
-- **Calendar:** Select dates and view Selichot content at `/calendar`.
+- **Calendar:** Understand Selichot prayer schedules and Hebrew dates at `/calendar`.
 
 ## Deployed URL
 
